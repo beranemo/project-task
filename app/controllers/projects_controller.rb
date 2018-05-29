@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
   end
   
   def create
-    @project = Project.new(prject_params)
+    @project = Project.new(project_params)
     @project.save
     redirect_to projects_path
   end
