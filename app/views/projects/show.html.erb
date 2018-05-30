@@ -13,3 +13,19 @@
 <%= f.text_field :title %>
 <%= f.submit %>
 <% end %>
+
+<script>
+$("input[type=checkbox]").click( function() {
+  $.ajax({
+    // url: '/projects/'+$(this).data('project_id')+'/tasks/'+$(this).data('id')+'/toggle',
+    url: '/xxx/' + $(this).data('id') + '/abc',
+    method: "POST",
+    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+    dataType: "json",
+    success: function(data) {
+      console.log("result");
+    }
+  });
+});
+
+</script>

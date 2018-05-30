@@ -12,6 +12,14 @@ class TasksController < ApplicationController
     redirect_to project_path(params[:project_id])
   end
   
+  def toggle
+    @task = Task.find(params[:id])
+    @task.done = !@task.done
+    @task.save
+    # render :json => { :id => @task.id, :done => @task.done }
+  end
+
+  
   private
   def task_params
     params.require(:task).permit(:title)
