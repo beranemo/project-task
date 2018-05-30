@@ -17,8 +17,7 @@
 <script>
 $("input[type=checkbox]").click( function() {
   $.ajax({
-    // url: '/projects/'+$(this).data('project_id')+'/tasks/'+$(this).data('id')+'/toggle',
-    url: '/xxx/' + $(this).data('id') + '/abc',
+    url: '/projects/'+$(this).data('project_id')+'/tasks/'+$(this).data('id')+'/toggle',
     method: "POST",
     beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
     dataType: "json",
@@ -27,5 +26,4 @@ $("input[type=checkbox]").click( function() {
     }
   });
 });
-
 </script>

@@ -7,9 +7,9 @@ Rails.application.routes.draw do
     resources :tasks, only: [:create, :destroy]
   end
   
-  get "/hello_world", to: "pages#hello"
-  # post "/projects/:project_id/tasks/:id/toggle", to: "tasks#toggle"
-  post "/xxx/:id/abc", to: "tasks#toggle"
+  #get "/hello_world", to: "pages#hello"
+  post "/projects/:project_id/tasks/:id/toggle", to: "tasks#toggle"
+  #post "/xxx/:id/abc", to: "tasks#toggle"
 
   
 end
