@@ -7,7 +7,7 @@
 <% end %>
 
 <br>
-<%= form_for [@project, @project.tasks.build] do |f| %>
+<%= form_for [@project, @project.tasks.new] do |f| %>
 <%= f.text_field :title %>
 <%= f.submit %>
 <% end %>
