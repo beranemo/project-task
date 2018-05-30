@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   # see http://guides.rubyonrails.org/routing.html
   
   root 'projects#index'
-  resources :projects
+  resources :projects do
+    resources :tasks, only: [:create, :destroy]
+  end
   
 end
