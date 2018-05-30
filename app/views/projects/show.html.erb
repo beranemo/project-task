@@ -4,3 +4,9 @@
 <% @project.tasks.each do |task| %>
 <%= task.title %>
 <% end %>
+
+<br>
+<%= form_for [@project, @project.tasks.build] do |f| %>
+<%= f.text_field :title %>
+<%= f.submit %>
+<% end %>
